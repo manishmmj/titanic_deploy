@@ -8,8 +8,6 @@ file = open('titanic_model.pkl', 'rb')  # Replace with your trained model file n
 model = pickle.load(file)
 file.close()
 
-# Load dataset for options (if needed)
-data = pd.read_csv("titanic_data.csv")  # Replace with the Titanic dataset used for training
 
 st.title("Titanic Survival Predictor")
 
