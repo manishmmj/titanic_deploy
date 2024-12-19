@@ -32,7 +32,7 @@ if st.button('Predict Survival'):
     query = query.reshape(1, -1)
 
     # Predict survival
-    prediction = model.predict(query)[0]  # Assuming model output is 0 or 1
+    prediction = model.predict(query)  # Assuming model output is 0 or 1
 
     # Display result
     if prediction == 1:
