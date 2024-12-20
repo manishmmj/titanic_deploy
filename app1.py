@@ -31,8 +31,11 @@ if st.button('Predict Survival'):
     query = np.array([pclass, sex, age, sibsp, parch, fare, embarked])
     query = query.reshape(1, -1)
 
+    columns = model.columns
+    query_df = pd.DataFrame([query], columns=columns)
+    
     # Predict survival
-    prediction = model.fit_predict(query)  # Assuming model output is 0 or 1
+    prediction = model.fit_predict(query_df)  # Assuming model output is 0 or 1
 
     # Display result
     if prediction == 1:
