@@ -31,7 +31,7 @@ if st.button('Predict Survival'):
     query = np.array([pclass, sex, age, sibsp, parch, fare, embarked])
     query = query.reshape(1, -1)
 
-    columns = model.columns
+    columns = model.index
     query_df = pd.DataFrame([query], columns=columns)
     
     # Predict survival
