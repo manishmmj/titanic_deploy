@@ -28,7 +28,7 @@ if st.button('Predict Survival'):
     embarked = embarked_mapping[embarked]
 
     # Create query array
-    query = np.array([pclass, sex, age, sibsp, parch, fare, embarked])
+    query = np.array([[pclass, sex, age, sibsp, parch, fare, embarked]])
     query = np.squeeze(query, axis=1)  # Shape becomes (1, 7)
 
     
