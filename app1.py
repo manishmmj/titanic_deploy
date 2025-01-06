@@ -29,7 +29,7 @@ if st.button('Predict Survival'):
 
     # Create query array
     query = np.array([pclass, sex, age, sibsp, parch, fare, embarked])
-    query = query.reshape(1, -1)
+    query = np.squeeze(query, axis=1)  # Shape becomes (1, 7)
 
     
     # Feature names from the model
